@@ -42,10 +42,10 @@ class Description extends AbstractModel
     public static function fromArray(array $array): self
     {
         return new self(
-            $array['hotelier_welcome_message'],
-            $array['hotel_important_information'],
-            $array['hotel_description'],
-            $array['license_number']
+            $array['hotelier_welcome_message'] ?? '',
+            $array['hotel_important_information'] ?? '',
+            $array['hotel_description'] ?? '',
+            $array['license_number'] ?? ''
         );
     }
 
